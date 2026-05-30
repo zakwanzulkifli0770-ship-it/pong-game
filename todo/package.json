@@ -1,0 +1,12 @@
+{
+  "name": "pong-game",
+  "version": "1.0.0",
+  "description": "A pong game project",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Build script\"",
+    "test": "echo \"Test script\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
