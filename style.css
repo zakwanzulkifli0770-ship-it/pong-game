@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    gap: 40px;
+}
+
+.score {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.score p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.score p:last-child {
+    font-size: 3em;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.game-board {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: #000;
+    border: 3px solid #fff;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.paddle {
+    position: absolute;
+    width: 15px;
+    height: 80px;
+    background: #00ff00;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    transition: box-shadow 0.1s;
+}
+
+.paddle:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+}
+
+.player-paddle {
+    left: 10px;
+}
+
+.computer-paddle {
+    right: 10px;
+}
+
+.ball {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        #fff 0,
+        #fff 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    opacity: 0.5;
+}
+
+.controls {
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .game-board {
+        width: 600px;
+        height: 300px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .scoreboard {
+        gap: 20px;
+    }
+    
+    .score p:last-child {
+        font-size: 2.5em;
+    }
+}
