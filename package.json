@@ -1,0 +1,14 @@
+{
+  "name": "pong-game",
+  "version": "1.0.0",
+  "description": "A Pong game project",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build step'",
+    "test": "echo 'Test step'"
+  },
+  "keywords": ["pong", "game"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
